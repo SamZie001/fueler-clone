@@ -2,6 +2,8 @@ import React from "react";
 import Header from "./components/Header";
 import CTA from "./components/CTA";
 import Workers from "./components/Workers";
+import PortfolioTool from "./components/PortfolioTool";
+import RepositoryOfWork from "./components/RepositoryOfWork";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         </div>
       </div>
       <Workers />
+      <PortfolioTool />
+      <RepositoryOfWork />
     </div>
   );
 }

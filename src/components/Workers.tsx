@@ -9,22 +9,13 @@ const Workers = () => {
   const [currWidth, setCurrWidth] = useState(window.innerWidth);
   const workers: workerI[] = [
     {
-      srcExt: "communit_manager",
-    },
-    {
       srcExt: "content_writer",
     },
     {
-      srcExt: "copywriter",
+      srcExt: "communit_manager",
     },
     {
-      srcExt: "designer",
-    },
-    {
-      srcExt: "developer",
-    },
-    {
-      srcExt: "finance_analyst",
+      srcExt: "product_manager",
     },
     {
       srcExt: "marketer",
@@ -33,10 +24,19 @@ const Workers = () => {
       srcExt: "NoCode",
     },
     {
-      srcExt: "product_manager",
+      srcExt: "finance_analyst",
     },
     {
       srcExt: "video_editors",
+    },
+    {
+      srcExt: "designer",
+    },
+    {
+      srcExt: "copywriter",
+    },
+    {
+      srcExt: "developer",
     },
   ];
 
@@ -53,10 +53,10 @@ const Workers = () => {
   });
   return (
     <div>
-      <h1 className="header-text mb-3">
+      <h1 className="header-text">
         Powering the next generation of knowledge workers
       </h1>
-      <p className="mb-10 text-center text-primary">
+      <p className="subhead-text">
         Fueler is an online portfolio tool for individuals good at multiple
         skills
       </p>
@@ -78,8 +78,9 @@ const Workers = () => {
         {currWidth <= 768 && (
           <DragSlider
             images={workers.slice(0, 5)}
-            slidesPerView={1}
+            slidesPerView={1.5}
             imgWidths={"90%"}
+            delay={2500}
           />
         )}
       </div>
@@ -88,8 +89,9 @@ const Workers = () => {
         {currWidth <= 768 && (
           <DragSlider
             images={workers.slice(5, 10)}
-            slidesPerView={1}
+            slidesPerView={1.5}
             imgWidths={"90%"}
+            delay={1500}
           />
         )}
       </div>
