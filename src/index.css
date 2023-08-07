@@ -1,13 +1,78 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes dropIn {
+  0% {
+    max-height: 0;
+    overflow: hidden;
+  }
+  25% {
+    max-height: 250px;
+    overflow: hidden;
+  }
+  50% {
+    max-height: 500px;
+    overflow: hidden;
+  }
+  75% {
+    max-height: 750px;
+    overflow: hidden;
+  }
+  100% {
+    max-height: auto;
+    overflow: visible;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes dropOut {
+  0% {
+    max-height: auto;
+    overflow: visible;
+  }
+  25% {
+    max-height: 75%;
+    overflow: hidden;
+  }
+  50% {
+    max-height: 50%;
+    overflow: hidden;
+  }
+  75% {
+    max-height: 25%;
+    overflow: hidden;
+  }
+  100% {
+    max-height: 0;
+  }
+}
+
+.btn {
+  @apply border-none md:py-2 md:px-5 py-2 px-3 text-primary font-semibold rounded-md bg-secondary-200 shadow-lg shadow-secondary-100 hover:text-white transition ease-in-out duration-200;
+}
+.header-text {
+  @apply text-primary md:font-bold font-semibold md:text-[40px] text-[32px] text-center tracking-tighter;
+}
+.logo {
+  width: 162px;
+}
+.container {
+  @apply my-0 mx-auto md:w-container md:px-0 px-4 w-smallContainer;
+}
+.nav-list li {
+  @apply hover:text-secondary-pink transition ease-in-out duration-200 md:p-0 py-2;
+}
+
+.drop-in {
+  animation-name: dropIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.drop-out {
+  animation-name: dropOut;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
