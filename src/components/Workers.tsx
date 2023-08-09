@@ -67,7 +67,7 @@ const Workers = () => {
             {workers.map((img, ind) => (
               <img
                 key={ind}
-                width={190}
+                width={180}
                 src={`/assets/workers/${img.srcExt}.png`}
                 alt=""
               />

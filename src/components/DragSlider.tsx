@@ -5,9 +5,6 @@ import { Autoplay, A11y } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 export interface sliderI {
   slidesPerView: number;
@@ -26,6 +23,7 @@ const DragSlider = ({ children, slidesPerView, delay }: sliderI) => {
         disableOnInteraction: false,
       }}
       loop={true}
+      grabCursor={true}
     >
       {children.map((child, index) => (
         <SwiperSlide key={index}>{child}</SwiperSlide>
