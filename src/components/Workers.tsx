@@ -61,39 +61,51 @@ const Workers = () => {
         skills
       </p>
 
-      {currWidth > 768 && (
-        <div className="flex flex-wrap items-center justify-center gap-10 px-[77px]">
-          {workers.map((img, ind) => (
-            <img
-              key={ind}
-              width={190}
-              src={`/assets/workers/${img.srcExt}.png`}
-              alt=""
-            />
-          ))}
-        </div>
-      )}
-
-      <div className="mb-10">
-        {currWidth <= 768 && (
-          <DragSlider
-            images={workers.slice(0, 5)}
-            slidesPerView={1.5}
-            imgWidths={"90%"}
-            delay={2500}
-          />
-        )}
-      </div>
-
       <div>
-        {currWidth <= 768 && (
-          <DragSlider
-            images={workers.slice(5, 10)}
-            slidesPerView={1.5}
-            imgWidths={"90%"}
-            delay={1500}
-          />
+        {currWidth > 768 && (
+          <div className="flex flex-wrap items-center justify-center gap-10 px-[77px]">
+            {workers.map((img, ind) => (
+              <img
+                key={ind}
+                width={190}
+                src={`/assets/workers/${img.srcExt}.png`}
+                alt=""
+              />
+            ))}
+          </div>
         )}
+
+        <div className="mb-10">
+          {currWidth <= 768 && (
+            <DragSlider slidesPerView={currWidth < 600 ? 1.5 : 1} delay={2100}>
+              {workers.slice(0, 5).map((wrk, ind) => (
+                <img
+                  className={`${currWidth > 600 ? "mx-auto my-0" : "ml-2"}`}
+                  width={currWidth < 600 ? "auto" : "90%"}
+                  key={ind}
+                  src={`/assets/workers/${wrk.srcExt}.png`}
+                  alt=""
+                />
+              ))}
+            </DragSlider>
+          )}
+        </div>
+
+        <div className="mb-10">
+          {currWidth <= 768 && (
+            <DragSlider slidesPerView={currWidth < 600 ? 1.5 : 1} delay={1500}>
+              {workers.slice(5, 10).map((wrk, ind) => (
+                <img
+                  className={`${currWidth > 600 ? "mx-auto my-0" : "ml-2"}`}
+                  width={currWidth < 600 ? "auto" : "90%"}
+                  key={ind}
+                  src={`/assets/workers/${wrk.srcExt}.png`}
+                  alt=""
+                />
+              ))}
+            </DragSlider>
+          )}
+        </div>
       </div>
     </div>
   );
