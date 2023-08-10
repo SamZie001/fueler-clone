@@ -39,6 +39,11 @@ const Workers = () => {
       srcExt: "developer",
     },
   ];
+  const breakPts = {
+    600: {
+      slidesPerView: 1,
+    },
+  };
 
   useEffect(() => {
     const handleSwitch = () => {
@@ -77,11 +82,11 @@ const Workers = () => {
 
         <div className="mb-10">
           {currWidth <= 768 && (
-            <DragSlider slidesPerView={currWidth < 600 ? 1.5 : 1} delay={2100}>
+            <DragSlider delay={3000} breakpoints={breakPts} slidesPerView={1.5}>
               {workers.slice(0, 5).map((wrk, ind) => (
                 <img
-                  className={`${currWidth > 600 ? "mx-auto my-0" : "ml-2"}`}
-                  width={currWidth < 600 ? "auto" : "90%"}
+                  className="mx-auto my-0"
+                  width="90%"
                   key={ind}
                   src={`/assets/workers/${wrk.srcExt}.png`}
                   alt=""
@@ -93,11 +98,11 @@ const Workers = () => {
 
         <div className="mb-10">
           {currWidth <= 768 && (
-            <DragSlider slidesPerView={currWidth < 600 ? 1.5 : 1} delay={1500}>
+            <DragSlider delay={2500} breakpoints={breakPts} slidesPerView={1.5}>
               {workers.slice(5, 10).map((wrk, ind) => (
                 <img
-                  className={`${currWidth > 600 ? "mx-auto my-0" : "ml-2"}`}
-                  width={currWidth < 600 ? "auto" : "90%"}
+                  className="mx-auto my-0"
+                  width="90%"
                   key={ind}
                   src={`/assets/workers/${wrk.srcExt}.png`}
                   alt=""

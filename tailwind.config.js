@@ -20,7 +20,7 @@ module.exports = {
           "inset 2px 2px 3px rgba(13, 5, 67, 0.3), inset -2px -2px 3px rgba(13, 5, 67, 0.3);",
       },
       width: {
-        container: "1103px",
+        container: "85%",
         smallContainer: "95%",
       },
     },

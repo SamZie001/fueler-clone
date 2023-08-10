@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import DragSlider from "./DragSlider";
 
 export interface RepoI {
@@ -10,10 +10,6 @@ export interface RepoI {
 }
 
 const RepositoryOfWork = () => {
-  const [currWidth, setCurrWidth] = useState(window.innerWidth);
-
-  const [slideNumber, setSlideNumber] = useState(4.5);
-
   const repository: RepoI[] = [
     {
       thumbnail: "carnal-masters.jpg",
@@ -104,41 +100,47 @@ const RepositoryOfWork = () => {
       bgColor: "dee2ff",
     },
   ];
-
-  useEffect(() => {
-    const handleSwitch = () => {
-      setCurrWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleSwitch);
-
-    return () => {
-      window.removeEventListener("resize", handleSwitch);
-    };
-  });
-
-  useEffect(() => {
-    if (currWidth < 767) {
-      return setSlideNumber(1);
-    }
-
-    if (currWidth < 999) {
-      return setSlideNumber(2.5);
-    }
-
-    if (currWidth <= 1029) {
-      return setSlideNumber(3.5);
-    }
-
-    if (currWidth > 1280) {
-      return setSlideNumber(5);
-    }
-
-    return setSlideNumber(4.5);
-  }, [currWidth]);
+  const breakPts = [
+    {
+      767: {
+        slidesPerView: 2.2,
+        spaceBetween: 24,
+      },
+      900: {
+        slidesPerView: 2.5,
+        spaceBetween: 24,
+      },
+      1000: {
+        slidesPerView: 3.4,
+        spaceBetween: 24,
+      },
+      1140: {
+        slidesPerView: 4.4,
+        spaceBetween: 24,
+      },
+    },
+    {
+      767: {
+        slidesPerView: 2.2,
+        spaceBetween: 24,
+      },
+      900: {
+        slidesPerView: 2.5,
+        spaceBetween: 24,
+      },
+      1000: {
+        slidesPerView: 3.4,
+        spaceBetween: 24,
+      },
+      1140: {
+        slidesPerView: 4.4,
+        spaceBetween: 24,
+      },
+    },
+  ];
 
   return (
-    <div className="pt-[103px] px-0 md:px-2">
+    <div className="pt-[103px] px-2 mb-[170px]">
       <div className="max-w-[715px] my-0 mx-auto">
         <h1 className="header-text">
           World’s Only Repository of Proof of Work
@@ -150,10 +152,10 @@ const RepositoryOfWork = () => {
       </div>
 
       <div className="mb-[27px]">
-        <DragSlider slidesPerView={slideNumber} delay={2500}>
+        <DragSlider slidesPerView={1} delay={2500} breakpoints={breakPts[0]}>
           {repository.map((item, ind) => (
             <div
-              className={`p-[24px] flex flex-col gap-6 rounded-[14px] overflow-hidden bg-[#${item.bgColor}] border-[1px] border-black min-w-[254px] md:min-h-[300px]`}
+              className={`p-[24px] flex flex-col gap-6 rounded-[14px] overflow-hidden bg-[#${item.bgColor}] border-[1px] border-black md:min-h-[300px]`}
               key={ind}
             >
               <img
@@ -185,13 +187,10 @@ const RepositoryOfWork = () => {
         </DragSlider>
       </div>
 
-      <DragSlider
-        slidesPerView={currWidth < 767 ? 1 : slideNumber - 0.3}
-        delay={3300}
-      >
+      <DragSlider slidesPerView={1} delay={3300} breakpoints={breakPts[1]}>
         {repository.reverse().map((item, ind) => (
           <div
-            className={`p-[24px] flex flex-col gap-6 rounded-[14px] overflow-hidden bg-[#${item.bgColor}] border-[1px] border-black md:min-w-[254px] md:min-h-[300px]`}
+            className={`p-[24px] flex flex-col gap-6 rounded-[14px] overflow-hidden bg-[#${item.bgColor}] border-[1px] border-black md:min-h-[300px]`}
             key={ind}
           >
             <img

@@ -4,6 +4,8 @@ import CTA from "./components/CTA";
 import Workers from "./components/Workers";
 import PortfolioTool from "./components/PortfolioTool";
 import RepositoryOfWork from "./components/RepositoryOfWork";
+import Guide from "./components/Guide";
+import WorkProof from "./components/WorkProof";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <Workers />
       <PortfolioTool />
       <RepositoryOfWork />
+      <Guide />
+      <WorkProof />
     </div>
   );
 }

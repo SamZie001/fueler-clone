@@ -35,8 +35,8 @@ const CTA = () => {
     };
   }, []);
   return (
-    <div className="w-[90%] my-0 mx-auto relative  bg-gradient-to-r from-secondary-100 to-secondary-lightPink rounded-3xl">
-      <div className="flex gap-4 md:flex-row flex-col justify-between items-center container">
+    <div className="container w-[90%] my-0 mx-auto relative bg-gradient-to-r from-secondary-100 to-secondary-lightPink rounded-3xl">
+      <div className="flex gap-4 md:flex-row flex-col justify-between items-center">
         <div className="absolute top-0 right-[-18px] ">
           <img
             className="transform z-0 md:scale-90 scale-50"

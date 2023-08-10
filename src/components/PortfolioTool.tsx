@@ -33,7 +33,6 @@ const PortfolioTool = () => {
           }.webp`}
           alt=""
         />
-        {/* <img src={"/assets/portfolio-tool_pri.webp"} alt="" /> */}
       </div>
     </div>
   );
