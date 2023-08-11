@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
-import CTA from "./components/CTA";
+import { CTA1, CTA2 } from "./components/CTA";
 import Workers from "./components/Workers";
 import PortfolioTool from "./components/PortfolioTool";
 import RepositoryOfWork from "./components/RepositoryOfWork";
@@ -9,12 +9,15 @@ import WorkProof from "./components/WorkProof";
 import Footer from "./components/Footer";
 import Trust from "./components/Trust";
 import WhyFeuler from "./components/WhyFeuler";
+import Features from "./components/Features";
+import Trending from "./components/Trending";
+import Customized from "./components/Customized";
 
 function App() {
   return (
     <div>
       <Header />
-      <CTA />
+      <CTA1 />
       <div className="my-[99px] mx-auto grid place-items-center gap-[56px]">
         <h1 className="header-text">As featured on</h1>
         <div className="md:flex grid gap-5">
@@ -29,6 +32,10 @@ function App() {
       <WorkProof />
       <Trust />
       <WhyFeuler />
+      <Features />
+      <Trending />
+      <Customized />
+      <CTA2 />
       <Footer />
     </div>
   );

@@ -51,6 +51,7 @@ const Trust = () => {
           slidesPerView={1}
           delay={3300}
           breakpoints={breakPts}
+          pagination={true}
         >
           {tweets.map((item) => (
             <img

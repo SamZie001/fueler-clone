@@ -1,10 +1,11 @@
 // @ts-nocheck
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, A11y } from "swiper/modules";
+import { Autoplay, A11y, Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
+import 'swiper/css/pagination';
 
 export interface sliderI {
   slidesPerView: number;
@@ -21,10 +22,11 @@ const DragSlider = ({
   slidesPerView,
   delay,
   direction,
+  pagination
 }: sliderI) => {
   return (
     <Swiper
-      modules={[Autoplay, A11y]}
+      modules={[Autoplay, A11y, Pagination]}
       slidesPerView={slidesPerView}
       autoplay={{
         delay: delay,
@@ -34,17 +36,13 @@ const DragSlider = ({
       grabCursor={true}
       breakpoints={breakpoints}
       dir={direction}
+      // pagination={{dynamicBullets: pagination}}
     >
       {children.map((child, index) => (
         <SwiperSlide key={index}>{child}</SwiperSlide>
       ))}
     </Swiper>
   );
-};
-
-DragSlider.defaultProps = {
-  breakpoints: {},
-  pagination: true, // Example of another prop with default value
 };
 
 export default DragSlider;
