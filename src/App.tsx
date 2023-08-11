@@ -6,6 +6,9 @@ import PortfolioTool from "./components/PortfolioTool";
 import RepositoryOfWork from "./components/RepositoryOfWork";
 import Guide from "./components/Guide";
 import WorkProof from "./components/WorkProof";
+import Footer from "./components/Footer";
+import Trust from "./components/Trust";
+import WhyFeuler from "./components/WhyFeuler";
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
       <RepositoryOfWork />
       <Guide />
       <WorkProof />
+      <Trust />
+      <WhyFeuler />
+      <Footer />
     </div>
   );
 }

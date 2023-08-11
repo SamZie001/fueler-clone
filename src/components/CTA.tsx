@@ -15,13 +15,13 @@ const CTA = () => {
   useEffect(() => {
     const handleResize = () => {
       const newImageSource1 =
-        window.innerWidth > 800
+        window.innerWidth > 1023
           ? "/assets/hero-left.png"
           : "/assets/hero-top__mobile.png";
       setImageSource1(newImageSource1);
 
       const newImageSource2 =
-        window.innerWidth > 800
+        window.innerWidth > 1023
           ? "/assets/hero-right.png"
           : "/assets/hero-btm__mobile.png";
       setImageSource2(newImageSource2);
@@ -29,17 +29,16 @@ const CTA = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
   return (
     <div className="container w-[90%] my-0 mx-auto relative bg-gradient-to-r from-secondary-100 to-secondary-lightPink rounded-3xl">
-      <div className="flex gap-4 md:flex-row flex-col justify-between items-center">
+      <div className="flex gap-4 lg:flex-row flex-col justify-between items-center">
         <div className="absolute top-0 right-[-18px] ">
           <img
-            className="transform z-0 md:scale-90 scale-50"
+            className="transform z-0 lg:scale-90 scale-50"
             src="/assets/thunder_white.png"
             alt=""
           />
@@ -59,7 +58,7 @@ const CTA = () => {
             <img
               src="/assets/generalists.png"
               alt=""
-              className="md:scale-100 scale-75"
+              className="lg:scale-100 scale-75"
             />
             <p className="text-sm md:font-medium font-light">
               Join 27500+ Generalists

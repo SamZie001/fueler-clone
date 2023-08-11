@@ -187,10 +187,10 @@ const RepositoryOfWork = () => {
         </DragSlider>
       </div>
 
-      <DragSlider slidesPerView={1} delay={3300} breakpoints={breakPts[1]}>
+      <DragSlider slidesPerView={1} delay={3300} breakpoints={breakPts[1]} direction="rtl">
         {repository.reverse().map((item, ind) => (
           <div
-            className={`p-[24px] flex flex-col gap-6 rounded-[14px] overflow-hidden bg-[#${item.bgColor}] border-[1px] border-black md:min-h-[300px]`}
+            className={`p-[24px] flex flex-col gap-6 rounded-[14px] overflow-hidden bg-[#${item.bgColor}] border-[1px] border-black md:min-h-[274px]`}
             key={ind}
           >
             <img

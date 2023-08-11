@@ -67,6 +67,29 @@
 .nav-list li {
   @apply hover:text-secondary-pink transition ease-in-out duration-200 md:p-0 py-2;
 }
+.footer h2 {
+  @apply text-xl text-[#2c2c2c] font-semibold mb-4;
+}
+.footer-column li {
+  @apply py-2;
+}
+.footer span {
+  @apply bg-secondary-pink px-2 rounded text-white text-sm font-semibold;
+}
+.pyramid {
+  @apply grid grid-cols-12 place-items-center justify-items-center gap-[30px];
+}
+.pyramid img:first-child,
+img:nth-child(2),
+img:nth-child(3) {
+  @apply col-span-4;
+}
+.pyramid img:nth-child(4) {
+  @apply col-start-3 col-span-4;
+}
+.pyramid img:last-child {
+  @apply col-start-7 col-span-4;
+}
 
 .drop-in {
   animation-name: dropIn;
