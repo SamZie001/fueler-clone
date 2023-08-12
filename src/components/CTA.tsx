@@ -35,7 +35,7 @@ export const CTA1 = () => {
     };
   }, []);
   return (
-    <div className="container relative bg-gradient-to-r from-secondary-100 to-secondary-lightPink rounded-3xl">
+    <div className="overflow-hidden container relative bg-gradient-to-r from-secondary-100 to-secondary-lightPink rounded-3xl">
       <div className="flex gap-4 lg:flex-row flex-col justify-between items-center">
         <div className="absolute top-0 right-[-18px] ">
           <img

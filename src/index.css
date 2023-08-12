@@ -64,8 +64,11 @@
 .container {
   @apply my-0 mx-auto md:w-container md:px-0 px-4 w-smallContainer;
 }
+.nav-container {
+  @apply my-0 mx-auto md:w-container w-smallContainer;
+}
 .nav-list li {
-  @apply hover:text-secondary-pink transition ease-in-out duration-200 md:p-0 py-2;
+  @apply hover:text-secondary-pink transition ease-in-out duration-200 md:p-0 pb-3;
 }
 .footer h2 {
   @apply text-xl text-[#2c2c2c] font-semibold mb-4;

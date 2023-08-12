@@ -20,7 +20,7 @@ function App() {
       <CTA1 />
       <div className="my-[99px] mx-auto grid place-items-center gap-[56px]">
         <h1 className="header-text">As featured on</h1>
-        <div className="md:flex grid gap-5">
+        <div className="flex md:flex-row flex-col items-center gap-5">
           <img src="/assets/bwm-logo.png" alt="bwm" />
           <img src="/assets/starter-story-logo.png" alt="" />
         </div>

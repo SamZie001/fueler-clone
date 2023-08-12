@@ -5,7 +5,7 @@ import { Autoplay, A11y, Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
-import 'swiper/css/pagination';
+import "swiper/css/pagination";
 
 export interface sliderI {
   slidesPerView: number;
@@ -22,7 +22,7 @@ const DragSlider = ({
   slidesPerView,
   delay,
   direction,
-  pagination
+  pagination,
 }: sliderI) => {
   return (
     <Swiper
@@ -36,7 +36,7 @@ const DragSlider = ({
       grabCursor={true}
       breakpoints={breakpoints}
       dir={direction}
-      // pagination={{dynamicBullets: pagination}}
+      spaceBetween={24}
     >
       {children.map((child, index) => (
         <SwiperSlide key={index}>{child}</SwiperSlide>

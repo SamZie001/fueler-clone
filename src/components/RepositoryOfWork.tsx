@@ -16,14 +16,14 @@ const RepositoryOfWork = () => {
       title: "Carnal Masters: A Sexual Health Platform Case Study",
       profile: "avatar-4",
       name: "Harsh",
-      bgColor: "fddae8",
+      bgColor: "#fddae8",
     },
     {
       thumbnail: "default.png",
       title: "Content Writing and Strategy Portfolio",
       profile: "avatar-1",
       name: "Diksha",
-      bgColor: "fde4e2",
+      bgColor: "#fde4e2",
     },
     {
       thumbnail: "duo-lingo.jpg",
@@ -31,14 +31,14 @@ const RepositoryOfWork = () => {
         "Mini-Product Analysis of Duolingo - the Gamified Language Learning Application.",
       profile: "avatar-1",
       name: "Diksha",
-      bgColor: "fff3dd",
+      bgColor: "#fff3dd",
     },
     {
       thumbnail: "kee-vurds.png",
       title: "Building KeeVurds - A Startup Media Platform",
       profile: "avatar-5",
       name: "Snugdha",
-      bgColor: "fffee3",
+      bgColor: "#fffee3",
     },
     {
       thumbnail: "medium.jpg",
@@ -52,7 +52,7 @@ const RepositoryOfWork = () => {
       title: "Present Slide - A Resource Hub For Students",
       profile: "avatar-4",
       name: "Harsh",
-      bgColor: "d8f2e9",
+      bgColor: "#d8f2e9",
     },
     {
       thumbnail: "default.png",
@@ -60,7 +60,7 @@ const RepositoryOfWork = () => {
         "Fun Things to do in Berkeley, CA That You’ll Keep Coming Back to | Roomi",
       profile: "avatar-5",
       name: "Snugdha",
-      bgColor: "e4f5fe",
+      bgColor: "#e4f5fe",
     },
     {
       thumbnail: "product-case.jpg",
@@ -68,7 +68,7 @@ const RepositoryOfWork = () => {
         "Product Case Study - Leap Dash (Deepstash for Career-based content)",
       profile: "avatar-3",
       name: "Ajeet",
-      bgColor: "e4f5fe",
+      bgColor: "#e4f5fe",
     },
     {
       thumbnail: "default.png",
@@ -76,28 +76,28 @@ const RepositoryOfWork = () => {
         "𝗣𝗥𝗔𝗝𝗪𝗔𝗟 on Instagram: 𝐋𝐢𝐟𝐞 𝐢𝐬 𝐭𝐨𝐨 𝐬𝐡𝐨𝐫𝐭 𝐭𝐨 𝐚𝐫𝐠𝐮𝐞, 𝐬𝐨 𝐣𝐮𝐬𝐭 𝐞𝐧𝐣𝐨𝐲 𝐞𝐯𝐞𝐫𝐲 𝐦𝐨𝐦𝐞𝐧𝐭… 🐎Edit- @i.hch12 ❤️",
       profile: "avatar-4",
       name: "Harsh",
-      bgColor: "f4e3fe",
+      bgColor: "#f4e3fe",
     },
     {
       thumbnail: "soda.jpg",
       title: "Storyboard Template for a Soda Commercial",
       profile: "avatar-2",
       name: "Himanshu",
-      bgColor: "fddae8",
+      bgColor: "#fddae8",
     },
     {
       thumbnail: "street-food.jpg",
       title: "The Best Street Food in New York You Can Eat Anytime!",
       profile: "avatar-5",
       name: "Snugdha",
-      bgColor: "fde4e2",
+      bgColor: "#fde4e2",
     },
     {
       thumbnail: "thank-you.jpeg",
       title: "Why You Should Start Supporting Local Businesses | Carrot",
       profile: "avatar-5",
       name: "Snugdha",
-      bgColor: "dee2ff",
+      bgColor: "#dee2ff",
     },
   ];
   const breakPts = [
@@ -155,8 +155,9 @@ const RepositoryOfWork = () => {
         <DragSlider slidesPerView={1} delay={2500} breakpoints={breakPts[0]}>
           {repository.map((item, ind) => (
             <div
-              className={`p-[24px] flex flex-col gap-6 rounded-[14px] overflow-hidden bg-[#${item.bgColor}] border-[1px] border-black md:min-h-[300px]`}
+              className={`p-[24px] flex flex-col gap-6 rounded-[14px] overflow-hidden md:min-h-[300px]`}
               key={ind}
+              style={{ backgroundColor: item.bgColor }}
             >
               <img
                 className="rounded-[14px] md:h-[129px]"
@@ -187,11 +188,17 @@ const RepositoryOfWork = () => {
         </DragSlider>
       </div>
 
-      <DragSlider slidesPerView={1} delay={3300} breakpoints={breakPts[1]} direction="rtl">
+      <DragSlider
+        slidesPerView={1}
+        delay={3300}
+        breakpoints={breakPts[1]}
+        direction="rtl"
+      >
         {repository.reverse().map((item, ind) => (
           <div
-            className={`p-[24px] flex flex-col gap-6 rounded-[14px] overflow-hidden bg-[#${item.bgColor}] border-[1px] border-black md:min-h-[274px]`}
+            className={`p-[24px] flex flex-col gap-6 rounded-[14px] overflow-hidden bg-[${item.bgColor}] md:min-h-[274px]`}
             key={ind}
+            style={{ backgroundColor: item.bgColor }}
           >
             <img
               className="rounded-[14px] md:h-[129px]"
