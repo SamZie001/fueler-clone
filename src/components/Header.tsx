@@ -18,14 +18,9 @@ const Header = () => {
 
   useEffect(() => {
     if (scrollTopPosition >= 60) {
-      navbar.current.style.position = "fixed";
-      navbar.current.style.top = "0";
-      navbar.current.style.zIndex = "999"; // Higher z-index to be above other content
-      navbar.current.style.background = "rgba(255, 255, 255, 0.8)"; // Reduced opacity
-      navbar.current.style.width = "100%"; // Reduced opacity
+      navbar.current.classList.add("fixed-nav");
     } else {
-      navbar.current.style.position = "relative";
-      navbar.current.style.background = "transparent"; // Restore original background
+      navbar.current.classList.remove("fixed-nav");
     }
   }, [scrollTopPosition]);
 
@@ -47,13 +42,13 @@ const Header = () => {
       ref={navbar}
       className="pt-3 pb-5 font-semibold text-gray-700 relative"
     >
-      <div className="nav-container flex justify-between items-center ">
+      <div className="nav-container flex justify-between items-center">
         <a href="/">
           <img className="logo" src="/assets/fueler_logo.svg" alt="fueler" />
         </a>
 
         <div
-          className="py-5 z-10 bg-white hidden md:flex md:items-center md:justify-between md:p-0 pr-24 rounded-2xl md:gap-20 md:static absolute top-20 right-0"
+          className="py-5 z-10 bg-white md:bg-transparent hidden md:flex md:items-center md:justify-between md:p-0 pr-24 rounded-2xl md:gap-20 md:static absolute top-20 right-0"
           ref={navList}
         >
           <ul className="nav-list md:flex gap-10 ml-7">

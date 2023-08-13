@@ -51,6 +51,8 @@
 
 .btn {
   @apply border-none md:py-2 md:px-5 py-2 px-3 text-primary font-semibold rounded-md bg-secondary-200 shadow-lg shadow-secondary-100 hover:text-white transition ease-in-out duration-200;
+  box-shadow: inset -10px 0px 10px -15px rgba(13, 5, 67, 0.8),
+    inset 10px 0px 10px -15px rgba(13, 5, 67, 0.8);
 }
 .header-text {
   @apply mb-3 text-primary md:font-bold font-semibold md:text-[40px] text-[32px] text-center tracking-tighter;
@@ -63,6 +65,16 @@
 }
 .container {
   @apply my-0 mx-auto md:w-container md:px-0 px-4 w-smallContainer;
+}
+.fixed-nav {
+  position: fixed;
+  width: 100%;
+  z-index: 90;
+  top: 0;
+  background: rgba(255, 255, 255, 0.4588235294117647);
+  border: 1px solid rgba(126, 117, 117, 0.176);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
 }
 .nav-container {
   @apply my-0 mx-auto md:w-container w-smallContainer;
