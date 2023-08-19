@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-gray-50 pt-[64px] pb-[26px]">
-      <div className="container grid md:grid-cols-3 footer md:gap-5 gap-15">
+      <div className="container grid md:grid-cols-3 footer md:gap-5 gap-15 pb-14">
         <div className=" col-span-1">
           <img
             className="mb-[16px] md:w-[160px] w-[200px]"
@@ -57,6 +57,21 @@ const Footer = () => {
             </div>
           </ul>
         </div>
+      </div>
+
+      <div className="flex flex-col justify-center items-center gap-5">
+        <div className="flex gap-8">
+          <img width={20} src="twitter.svg" alt="" />
+          <img width={20} src="yt.svg" alt="" />
+          <img width={13} src="ig.svg" alt="" />
+          <img width={15} src="share.svg" alt="" />
+        </div>
+        <p className="text-primary text-xs font-semibold">
+          Copyright © Kiwismedia Technologies Private Limited
+        </p>
+        <p className="text-primary text-xs font-semibold">
+          Heartcrafted with ❤️ remotely in India
+        </p>
       </div>
     </footer>
   );

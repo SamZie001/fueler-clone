@@ -41,7 +41,7 @@ const Customized = () => {
       ]);
     }
     if (section === 2) {
-      setImgSrc("publish-share");
+      setImgSrc("select-add_work");
       setTitle("Select the Work");
       setDesc(
         "Pick all the works, around a particular need and get an instantly dynamic generated landing page for selected works."
@@ -53,7 +53,7 @@ const Customized = () => {
       ]);
     }
     if (section === 3) {
-      setImgSrc("select-add_work");
+      setImgSrc("publish-share");
       setTitle("Let’s see the magic");
       setDesc(
         "Time to see the magic happening, just hit the button and get a brand new need specific work portfolio."

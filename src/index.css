@@ -55,7 +55,7 @@
     inset 10px 0px 10px -15px rgba(13, 5, 67, 0.8);
 }
 .header-text {
-  @apply mb-3 text-primary md:font-semibold md:text-[40px] text-[32px] text-center tracking-tighter;
+  @apply mb-3 text-primary font-semibold md:text-[40px] text-[32px] text-center tracking-tighter;
 }
 .subhead-text {
   @apply mb-10 text-primary text-[18px] text-center;
@@ -85,11 +85,8 @@
 .footer h2 {
   @apply text-xl text-[#2c2c2c] font-semibold mb-4;
 }
-.footer-ul {
-  border: 1px solid black;
-}
 .footer-column li {
-  @apply py-2;
+  @apply py-1 text-sm text-primary;
 }
 .footer span {
   @apply bg-secondary-pink px-2 rounded text-white text-sm font-semibold;
