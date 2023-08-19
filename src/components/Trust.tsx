@@ -31,11 +31,11 @@ const Trust = () => {
           Trusted by the folks from the amazing communities
         </h1>
 
-        <div className="flex flex-wrap justify-center gap-[16px] items-center">
+        <div className="flex flex-wrap justify-center gap-[16px] items-center mt-10">
           {communities.map((pic, ind) => (
             <img
               key={ind}
-              width={90}
+              width={85}
               className="rounded-full"
               src={`/assets/repository/communities/${pic}.png`}
               alt=""

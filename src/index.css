@@ -55,7 +55,7 @@
     inset 10px 0px 10px -15px rgba(13, 5, 67, 0.8);
 }
 .header-text {
-  @apply mb-3 text-primary md:font-bold font-semibold md:text-[40px] text-[32px] text-center tracking-tighter;
+  @apply mb-3 text-primary md:font-semibold md:text-[40px] text-[32px] text-center tracking-tighter;
 }
 .subhead-text {
   @apply mb-10 text-primary text-[18px] text-center;
@@ -85,6 +85,9 @@
 .footer h2 {
   @apply text-xl text-[#2c2c2c] font-semibold mb-4;
 }
+.footer-ul {
+  border: 1px solid black;
+}
 .footer-column li {
   @apply py-2;
 }
@@ -104,6 +107,60 @@ img:nth-child(3) {
 }
 .pyramid img:last-child {
   @apply col-start-7 col-span-4;
+}
+
+.toggles {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.toggles input,
+.toggles::before,
+.toggles::after {
+  content: "";
+  background-color: #0d0543;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggles input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.toggles::after {
+  rotate: 90deg;
+}
+
+.toggles:has(input:checked)::after,
+.toggles:has(input:checked)::before,
+.toggles input:checked {
+  height: 2.5px;
+  rotate: 180deg;
+}
+
+.transition-background {
+  transition: background-color 0.5s ease-in-out;
+}
+.def-content {
+  @apply max-h-0 overflow-hidden transition-all duration-500;
+  transition-timing-function: cubic-bezier(0, 1, 0, 1);
+}
+.show-content {
+  @apply h-auto max-h-[999px] transition-all duration-500;
+  transition-timing-function: cubic-bezier(1, 0, 1, 0);
 }
 
 .drop-in {

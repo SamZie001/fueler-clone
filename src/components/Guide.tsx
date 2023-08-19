@@ -1,12 +1,19 @@
 // @ts-nocheck
 import React, { useState } from "react";
-import { Modal, Slide, Dialog, useMediaQuery, useTheme } from "@mui/material";
+import {
+  DialogActions,
+  Slide,
+  Dialog,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { TransitionProps } from "@mui/material/transitions";
 
 const Guide = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClose = () => setIsOpen(false);
   const theme = useTheme();
+
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   const Transition = React.forwardRef(function Transition(
@@ -35,17 +42,34 @@ const Guide = () => {
       />
 
       <Dialog
-        TransitionComponent={Transition}
+        fullWidth
         fullScreen={fullScreen}
         open={isOpen}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <div className="outline-none h-[100%] flex justify-center items-center">
+        <div>
+          <DialogActions>
+            <svg
+              onClick={handleClose}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={10}
+              stroke="#333"
+              className="w-6 h-6 cursor-pointer"
+            >
+              <path
+                strokeLinecap="square"
+                strokeLinejoin="square"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </DialogActions>
           <iframe
-            width="768"
-            height="432"
+            width="100%"
+            height={432}
             src="https://www.youtube.com/embed/fu3VNaZU12I"
             title="The Ultimate Guide to Use Fueler | Fueler"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

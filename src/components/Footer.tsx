@@ -3,12 +3,12 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-gray-50 pt-[64px] pb-[26px]">
-      <div className="container flex flex-col md:flex-row footer gap-[57px]">
-        <div className="md:w-[253px]">
+      <div className="container grid md:grid-cols-3 footer md:gap-5 gap-15">
+        <div className=" col-span-1">
           <img
             className="mb-[16px] md:w-[160px] w-[200px]"
             src="/assets/logo_registered.svg"
-            alt="feuler logo"
+            alt="fueler logo"
           />
           <p className="text-[#2c2c2c] md:text-base text-md">
             Fueler is an online platform to help you showcase your work on the
@@ -16,7 +16,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-4">
+        <div className="col-span-2 grid md:grid-cols-3 grid-cols-2 gap-5">
           <ul>
             <h2>Company</h2>
             <div className="footer-column">
@@ -24,9 +24,9 @@ const Footer = () => {
               <li>About</li>
               <li>Blog</li>
               <li>FAQs</li>
-              <li>Feuler Wiki</li>
+              <li>Fueler Wiki</li>
               <li>Proof of work ideas</li>
-              <li>Feuler Ambassador Program</li>
+              <li>Fueler Ambassador Program</li>
               <li>
                 Write for us <span>New</span>
               </li>
